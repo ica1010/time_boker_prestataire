@@ -14,101 +14,9 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int _page_index = 0;
   final List<Widget> pages = [
-    HomePage(),
     VServiceManagerPage(),
     Setting(),
   ];
-  void initState() {
-    super.initState();
-    // Appeler la fonction pour afficher l'alerte après un délai de 15 secondes
-    Future.delayed(Duration(seconds: 10), () {
-      showAlert(context);
-    });
-  }
-
-  void showAlert(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return SimpleDialog(
-          title: Text("Veillez vous connectez"),
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 45,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        label: Text('Enter Your Phone number'),
-                        prefixIcon: Icon(Icons.person),
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30.0))),
-                        hintText: 'ex:+228 99 88 77 66',
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  Container(
-                    height: 45,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                    ),
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        label: Text('Enter Your Password'),
-                        prefixIcon: Icon(Icons.key),
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30.0))),
-                        hintText: 'enter your secret password',
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 32),
-                  Container(
-                    width: 150,
-                    height: 35,
-                    decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(18)),
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: Text(
-                        'Se connecter',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SignUpPage()),
-                      );
-                    },
-                    child: Text('Pas encore de compte? S\'inscrire'),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        );
-      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -141,10 +49,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
                         selectedLabelStyle: TextStyle(
                             fontWeight: FontWeight.w600, fontSize: 10.5),
                         items: [
-                          BottomNavigationBarItem(
-                              activeIcon: Icon(Icons.home),
-                              icon: Icon(Icons.home_outlined),
-                              label: 'Acceuille'),
                           BottomNavigationBarItem(
                               activeIcon: Icon(Icons.calendar_month),
                               icon: Icon(Icons.calendar_month_outlined),

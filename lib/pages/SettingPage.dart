@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_boker_prestataire/pages/LoginPage.dart';
 import 'package:time_boker_prestataire/pages/Pocket.dart';
 import 'package:time_boker_prestataire/pages/change_profile.dart';
 import 'package:time_boker_prestataire/pages/change_service.dart';
@@ -133,7 +134,42 @@ class Setting extends StatelessWidget {
                 },
               ),
             ),
-         
+
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 8),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(15))),
+              child: ListTile(
+                title: Text('Login'),
+                leading: Icon(Icons.login),
+                trailing: Icon(Icons.keyboard_arrow_right),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 20),
+              decoration: BoxDecoration(
+                  color: Colors.redAccent,
+                  borderRadius: BorderRadius.all(Radius.circular(15))),
+              child: ListTile(
+                title:Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(Icons.logout)
+                    ,
+                    Text('Logout')
+                  ],
+                ) ,
+onTap: (){} ,
+                ),
+              ),
           ],
         ),
       ),

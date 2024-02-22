@@ -45,7 +45,7 @@ class _VServiceManagerPageState extends State<VServiceManagerPage> {
             ),
             bottom: TabBar(
               overlayColor: MaterialStateProperty.all(Colors.transparent),
-              indicatorColor: Colors.transparent,
+              indicatorColor: Color.fromRGBO(240, 240, 240, 1),
               dividerHeight: 0,
               tabs: [
                 Tab(
