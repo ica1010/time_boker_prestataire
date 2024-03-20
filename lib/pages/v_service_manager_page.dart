@@ -45,14 +45,15 @@ class _VServiceManagerPageState extends State<VServiceManagerPage> {
             ),
             bottom: TabBar(
               overlayColor: MaterialStateProperty.all(Colors.transparent),
-              indicatorColor: Color.fromRGBO(240, 240, 240, 1),
-              dividerHeight: 0,
+              isScrollable: true,
+              tabAlignment: TabAlignment.center,
               tabs: [
+
                 Tab(
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 255, 219, 170),
+                        color: Colors.redAccent,
                         borderRadius: BorderRadius.all(Radius.circular(18))),
                     child: Text(
                       overflow: TextOverflow.ellipsis,
@@ -214,8 +215,7 @@ class ServiceStatus extends StatelessWidget {
                         color: Color.fromARGB(255, 255, 219, 170),
                         borderRadius: BorderRadius.circular(18)),
                     child: TextButton(
-                      onPressed: () {
-                      },
+                      onPressed: () {},
                       child: Text(
                         'Accepter',
                         style: TextStyle(color: Colors.black),
@@ -227,12 +227,10 @@ class ServiceStatus extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     height: 35,
                     decoration: BoxDecoration(
-                        color:Color.fromARGB(255, 255, 219, 170),
+                        color: Color.fromARGB(255, 255, 219, 170),
                         borderRadius: BorderRadius.circular(18)),
                     child: TextButton(
-                      onPressed: () {
-                    
-                      },
+                      onPressed: () {},
                       child: Text(
                         'Décalé',
                         style: TextStyle(color: Colors.black),
@@ -244,11 +242,10 @@ class ServiceStatus extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     height: 35,
                     decoration: BoxDecoration(
-                        color:Color.fromARGB(255, 255, 219, 170),
+                        color: Color.fromARGB(255, 255, 219, 170),
                         borderRadius: BorderRadius.circular(18)),
                     child: TextButton(
-                      onPressed: () {
-                      },
+                      onPressed: () {},
                       child: Text(
                         'Refuser',
                         style: TextStyle(color: Colors.black),

@@ -49,6 +49,9 @@ dev_dependencies:
   carousel_slider: ^4.0.0
   sizer: ^2.0.15
   auto_size_text: ^3.0.0
+  image_picker: ^1.0.7
+  image_cropper: ^5.0.1
+  permission_handler: ^11.3.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
